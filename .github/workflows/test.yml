@@ -16,7 +16,9 @@ jobs:
         cache: npm
     - name: Install dependencies
       run: npm ci
-    - name: Install browser dependencies
+    - name: Install Playwright system dependencies
       run: npx playwright install-deps
+    - name: Install Playwright browsers
+      run: npx playwright install
     - name: Run tests
       run: npm test 
